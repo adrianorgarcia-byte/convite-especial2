@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite Especial</title>
+
+<style>
+body {
+margin: 0;
+font-family: 'Arial', sans-serif;
+background: black;
+color: white;
+text-align: center;
+}
+
+.section {
+padding: 60px 20px;
+opacity: 0;
+transform: translateY(40px);
+transition: 1s;
+}
+
+.show {
+opacity: 1;
+transform: translateY(0);
+}
+
+h1, h2 {
+font-weight: 300;
+}
+
+.highlight {
+color: #f5c06f;
+}
+
+button {
+padding: 15px 25px;
+margin: 15px;
+font-size: 16px;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.btn1 {
+background: #f5c06f;
+color: black;
+}
+
+.btn2 {
+background: transparent;
+color: white;
+border: 1px solid white;
+}
+
+button:hover {
+transform: scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Seção 1 -->
+<div class="section">
+<h1>🖤</h1>
+<h2>Tudo começou em <span class="highlight">Foz do Iguaçu</span>…</h2>
+<p>Alguns encontros que ficaram na memória,<br>
+conversas que fizeram a gente sorrir mais do que devia 😏<br>
+Momentos que, simplesmente, valeram a pena.</p>
+</div>
+
+<!-- Seção 2 -->
+<div class="section">
+<p>Então vieram os caminhos diferentes…</p>
+<p>✈️ Ribeirão Preto →<br>✈️ Belo Horizonte →</p>
+<p>Distância criada, mas talvez esse tenha sido o problema…<br>
+Encontrar alguém que acompanha o raciocínio…<br>
+e ainda consegue surpreender no meio do caminho.</p>
+</div>
+
+<!-- Seção 3 -->
+<div class="section">
+<h2>Mas algumas histórias não terminam direito…</h2>
+<h1 class="highlight">Capitólio - MG</h1>
+<p>Perigosamente perfeito…<br>
+(o que, honestamente, já diz bastante sobre a ideia 😄)</p>
+</div>
+
+<!-- Seção 4 -->
+<div class="section">
+<p>🚗 Dois caminhos começam…<br>
+E em algum momento, eles simplesmente se encontram.</p>
+</div>
+
+<!-- Seção 5 – Aventura -->
+<div class="section">
+<p>Sem roteiro definido, sem plano perfeito…<br>
+Só a chance de fazer algo fora do comum.</p>
+
+<p>Porque convenhamos…<br>
+o previsível nunca foi muito a sua praia.</p>
+</div>
+
+<!-- Seção 6 -->
+<div class="section">
+<h2>17 a 19 de Abril de 2026</h2>
+<p>Um final de semana. Uma escolha.</p>
+</div>
+
+<!-- Seção 7 – Elogio leve -->
+<div class="section">
+<p>Sendo bem direto…</p>
+
+<p>Não é sobre o destino.</p>
+
+<p>É sobre ter alguém que acompanha a ideia,<br>
+entra no jogo…<br>
+e ainda melhora o plano no meio do caminho.</p>
+
+<p class="highlight">E isso já filtra bastante gente.</p>
+</div>
+
+<!-- Seção 8 – Tensão -->
+<div class="section">
+<p>A verdade?</p>
+
+<p>Isso tem tudo pra virar uma ótima história…<br>
+ou pelo menos uma experiência nada entediante.</p>
+
+<p>Mas tem um detalhe importante:</p>
+
+<p class="highlight">coisas interessantes raramente começam com certeza.</p>
+</div>
+
+<!-- Seção 9 – Decisão -->
+<div class="section">
+<h2>Então vamos simplificar:</h2>
+
+<p>Você pode seguir o roteiro padrão…</p>
+
+<p>ou ver no que isso aqui pode dar.</p>
+
+<p class="highlight">Porque ficar curiosa e não fazer nada<br>
+não combina muito com você.</p>
+
+<p style="font-size: 14px; opacity: 0.7;">
+(ps: decisões sem graça não entram nessa história 😉)
+</p>
+
+<button class="btn1" onclick="responder('Ok… isso parece interessante demais pra ignorar 😏')">
+Ok… isso parece interessante 😏
+</button>
+
+<br>
+
+<button class="btn2" onclick="responder('Tô dentro. Vamos ver no que dá 😈')">
+Tô dentro. Vamos ver no que dá 😈
+</button>
+</div>
+
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+sections.forEach(sec => {
+const top = sec.getBoundingClientRect().top;
+if (top < window.innerHeight - 100) {
+sec.classList.add('show');
+}
+});
+});
+
+function responder(msg){
+const numero = "5511984150825";
+const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+window.location.href = url;
+}
+</script>
+
+</body>
+</html>
